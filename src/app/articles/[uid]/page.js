@@ -23,7 +23,7 @@ function LatestArticle({ article }) {
 
   return (
     <li>
-      <h1 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+      <h1 className="mb-3 text-4xl font-bold tracking-tighter text-black-400 md:text-4xl">
         <PrismicNextLink document={article}>
           <PrismicText field={article.data.title} />
         </PrismicNextLink>
@@ -92,7 +92,7 @@ export default async function Page({ params }) {
       </Bounded>
       <article>
         <Bounded className="pb-0">
-          <h1 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+          <h1 className="mb-3 text-6xl font-semibold tracking-tighter text-red-300 md:text-6xl">
             <PrismicText field={article.data.title} />
           </h1>
           <p className="font-serif italic tracking-tighter text-slate-500">
@@ -103,7 +103,7 @@ export default async function Page({ params }) {
       </article>
       {latestArticles.length > 0 && (
         <Bounded>
-          <div className="grid grid-cols-1 justify-items-center gap-16 md:gap-24">
+          <div className="grid grid-cols-1 gap-16 justify-items-center md:gap-24">
             <HorizontalDivider />
             <div className="w-full">
               <Heading size="2xl" className="mb-10">

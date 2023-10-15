@@ -7,12 +7,16 @@ import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 import { HorizontalDivider } from "./HorizontalDivider";
 
+import localFont from 'next/font/local';
+
+const MonumentGrotesk = localFont({src: '../fonts/ABCMonumentGrotesk-BlackItalic-Trial.otf'})
+
 const Profile = ({ name, description, profilePicture }) => {
   return (
     <div className="px-4">
-      <div className="grid max-w-lg grid-cols-1 justify-items-center gap-8">
+      <div className="grid max-w-lg grid-cols-1 gap-8 justify-items-center">
         <PrismicNextLink href="/" tabIndex="-1">
-          <div className="relative h-40 w-40 overflow-hidden rounded-full bg-slate-300">
+          <div className="relative w-40 h-40 overflow-hidden rounded-full bg-slate-300">
             {prismic.isFilled.image(profilePicture) && (
               <PrismicNextImage
                 field={profilePicture}
@@ -59,7 +63,7 @@ export const Header = ({
 }) => {
   return (
     <Bounded as="header">
-      <div className="grid grid-cols-1 justify-items-center gap-20">
+      <div className="grid grid-cols-1 gap-20 justify-items-center">
         <nav>
           <ul className="flex flex-wrap justify-center gap-10">
             <NavItem>
